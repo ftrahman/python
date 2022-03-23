@@ -1,0 +1,38 @@
+#
+# ps6pr3.txt (Problem Set 6, Problem 3, Tasks 1 and 2)
+#
+# Pseudorandom number generator
+#
+# Your values for a and c when m == 100:
+#     a: 21
+#     c: 3
+#
+
+00   read r1           # input a
+01   read r2           # input c
+02   read r3           # input m
+03   read r4           # input x_0
+04   read r5           # input n
+05   jltzn r3 25       # if r3 < 0, skip to line 25
+06   copy r6 r1        # r6 == r1
+07   addn r6 -1        # r6 = r6 - 1
+08   jeqzn r6 25       # if r6 = 0, skip to line 25
+09   jltzn r2 25       # if r2 < 0, skip to line 25
+10   jltzn r4 25       # if r4 < 0, skip to line 25
+11   copy r7 r3        # r7 == r3
+12   addn r7 -1        # r7 = r7 - 1
+13   sub r7 r7 r4      # r7 = r7 - r4
+14   jltzn r7 25       # if r7 < 0, skip to line 25
+15   jeqzn r5 25       # if r5 = 0, skip to line 25
+16   mul r8 r1 r4      # r8 = r1 * r4
+17   add r9 r8 r2      # r9 = r8 + r2
+18   mod r10 r9 r3     # r10 = r9 % r3
+19   write r10         # print r10
+20   copy r4 r10       # r4 == r10 
+21   addn r5 -1        # r5 = r5 -1
+22   jeqzn r5 24       # if r5 = 0, skip to line 24
+23   jumpn 16          # loop to line 16
+24   halt              
+25   setn r11 0        # r10 = 0
+26   write r11         # print r10
+27   halt              

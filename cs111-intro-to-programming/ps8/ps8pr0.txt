@@ -1,0 +1,3 @@
+
+
+The advantages of evolving programs to solve problems is that those initial programs are able to solve more than just one problem because they are adaptable to more than one type of problem. These evolved programs are able to account for many situations and aren’t specific to any one program. This leads to programs that are much more flexible and applicable on a larger scale. However, the disadvantage of evolved programs is that certain problems  are not as directly and easily solved as they could be, since they must run through many different evolved programs to reach a final result. There is probably more time invested in using evolved programs, no matter how much more applicable they are, than writing a code specific to a problem.

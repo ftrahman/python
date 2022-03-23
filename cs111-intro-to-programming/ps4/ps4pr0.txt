@@ -1,0 +1,3 @@
+1. The most preventable bug is the conversion from the 64-bit to the 160bit for a velocity that was necessary information. Researchers and scientists even mentioned within the article that it was almost completely unnecessary for the computer within the rocket to even have this operational system for the first forty seconds of flight. In fact, it’s really a back-up program that should just be re-modified in the case of a delayed countdown. 
+
+2.I disagree. If it doesn’t fail in the mechanical sense… Why did the rocket explode? Where are the mechanics? That’s an almost absurd point to make.

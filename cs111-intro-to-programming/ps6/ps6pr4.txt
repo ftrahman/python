@@ -1,0 +1,37 @@
+#
+# ps6pr4.txt (Problem Set 6, Problem 4)
+#
+# The Fibonacci sequence
+#
+
+00   read r1           # input n
+01   jeqzn r1 19       # if r1 = 0, skip to 19
+02   setn r2 1         # r2 = 1
+03   write r2          # print r2
+04   addn r1 -1        # r1 = r1 - 1
+05   jeqzn r1 22       # if r1 = 0, skip to 22
+06   write r2          # print r2
+07   setn r3 1         # r3 = 1
+08   setn r13 2        # r13 = 2
+09   addn r1 -1        # r1 = r1 - 1
+10   jeqzn r1 29       # if r1 = 0, skip to 29
+11   add r4 r3 r2      # r4 = r3 + r2
+12   write r4          # print r4
+13   call r14 25
+14   copy r2 r3        # r2 = r3
+15   copy r3 r4        # r3 = r4
+16   jumpn 09          # loop back to line 05
+17   nop             
+18   nop
+19   setn r2 0         # r2 = 0
+20   write r2          # print r2
+21   halt
+22   setn r2 1         # r2 = 1
+23   write r2          # print r1
+24   halt
+25   copy r15 r4       # r15 = r4
+26   add r13 r13 r15   # r13 = r13 + r15
+27   copy r15 r13      # r15 = r13
+28   jumpr r14         # jump to r14
+29   write r13         # print r13
+30   halt

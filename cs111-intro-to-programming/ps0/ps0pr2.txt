@@ -1,0 +1,51 @@
+# if there is nothing north, move north and into state 1
+0 x*** -> N 1
+
+# if there is nothing north and something east, continue north in state 1
+1 xE** -> N 1
+
+# if there are obstacles nother east and west, move south and into state 2
+1 NEW* -> S 2
+
+# if there is nothing east but something west and south, move east and into state 3
+2 *xWS -> E 3
+
+# if there is nothing east but something south, continue east in state 3
+3 *x*S -> E 3
+
+# if there is nothing south, move south and into state 2
+3 ***x -> S 2
+
+# if there is something west but nothing south, continue south in state 2
+2 **Wx -> S 2
+
+# if there is nothing west, move west and into state 0
+2 **x* -> W 0
+
+# if there is something north, bust nothing west continue west in state 0
+0 N*x* -> W 0
+
+# if you are in state one, with obstacles north and east but nothing move west and into state 0
+1 NEx* -> W 0
+
+# if you are in state one with nothing east, move east and into state 3
+1 *x** -> E 3
+
+# if there is something east and south, but nothing north, move north and into state one
+3 xE*S -> N 1
+
+# if you are in state three, with obstacles north, east and south, move west and into state zero
+3 NE*S -> W 0
+
+# if you are in state zero, with obstacles north and west but nothing south, move south and into state two
+0 N*Wx -> S 2
+
+# if you are in state zero with obstacles north, west and south, move east and into state 3
+0 N*WS -> E 3
+
+# if you are in state two with obstacles east, west and south, move north into state one
+2 *EWS -> N 1
+
+
+
+

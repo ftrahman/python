@@ -1,0 +1,39 @@
+# state 0 with nothing E: move E
+
+0 *x** -> E 0
+
+# state 0 with something to the E: go N 1 
+
+0 xE** -> N 0
+
+# state 0 with something to the N and E: go S + into st 1 
+
+0 NE** -> S 1
+
+# state 1 with nothing to the S: go S  
+
+1 ***x -> S 1
+
+# state 1 with something to the S: go W + into st 2
+ 
+1 ***S -> W 2 
+
+# state 2 with nothing to the N: go N
+
+2 x*** -> N 2 
+
+# state 2 with something to the N: go W + into st 1 
+
+2 N*** -> W 1 
+
+
+  
+
+
+ 
+
+
+
+
+
+

@@ -1,0 +1,58 @@
+
+1.
+  x  | scored_vals
+--------------------
+ -2  |  [4, -2
+  1  |  [4, -2, 1, 1
+  3     [4, -2, 1, 1, 9, 3
+ -4     [4, -2, 1, 1, 9, 3, 16, -4]
+
+
+2. best_pair will be assigned to 16, -4
+
+3. The value returned in -4. 
+
+4. mystery1 takes a list of values and applies a two rules to each value, the first being to find the square of the value, and the second being to just return the original value.
+
+5.
+mystery2('kisses')
+------------------------
+    s = 'kisses'
+    result_rest = mystery2('isses') = ‘sei’
+    return ‘seik’
+
+    mystery2('isses')
+    ---------------------
+        s = 'isses'
+        result_rest = mystery2('sses') = ‘se’
+        return ‘sei’
+
+        mystery2(’sses)
+        ---------------------
+            s = ‘sses’
+            result_rest = mystery2('ses') = ‘se’
+            return ‘se’
+
+ 		mystery2(’ses’)
+        	---------------------
+           	 s = ‘ses’
+            	result_rest = mystery2('es') = ’se’
+            	return ‘se’
+
+			mystery2(’es’)
+        		---------------------
+           	 	s = ‘es’
+            		result_rest = mystery2('s') = ’s’
+            		return ‘se’
+
+				mystery2(’s’)
+        			---------------------
+           	 		s = ‘s’
+            			return ‘s’
+
+6. The final result is ‘seik’.
+
+							
+		
+		
+		

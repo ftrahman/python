@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title>CS440 Homework Template: HW[x] Student Name [xxx]</title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1561.4">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; line-height: 14.0px; font: 12.0px 'Trebuchet MS'; color: #000000; -webkit-text-stroke: #000000; min-height: 14.0px}
+    p.p2 {margin: 0.0px 0.0px 0.0px 20.0px; line-height: 28.0px; font: 24.0px 'Trebuchet MS'; color: #000000; -webkit-text-stroke: #000000}
+    p.p3 {margin: 0.0px 0.0px 15.0px 20.0px; line-height: 14.0px; font: 12.0px 'Trebuchet MS'; color: #000000; -webkit-text-stroke: #000000}
+    p.p4 {margin: 0.0px 0.0px 20.0px 0.0px; line-height: 14.0px; font: 12.0px 'Trebuchet MS'; color: #000000; -webkit-text-stroke: #000000; min-height: 14.0px}
+    p.p5 {margin: 0.0px 0.0px 10.0px 10.0px; line-height: 21.0px; font: 18.0px 'Trebuchet MS'; color: #000000; -webkit-text-stroke: #000000}
+    p.p6 {margin: 0.0px 0.0px 15.0px 20.0px; line-height: 14.0px; font: 12.0px 'Trebuchet MS'; color: #000000; -webkit-text-stroke: #000000; min-height: 14.0px}
+    p.p7 {margin: 0.0px 0.0px 5.0px 5.0px; text-align: center; line-height: 16.0px; font: 14.0px 'Trebuchet MS'; color: #000000; -webkit-text-stroke: #000000}
+    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px 'Trebuchet MS'; color: #000000; -webkit-text-stroke: #000000}
+    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px 'Trebuchet MS'; color: #000000; -webkit-text-stroke: #000000; min-height: 14.0px}
+    li.li8 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px 'Trebuchet MS'; color: #000000; -webkit-text-stroke: #000000}
+    span.s1 {font-kerning: none}
+    td.td1 {width: 180.8px; margin: 0.5px 0.5px 0.5px 0.5px; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td2 {width: 32.6px; margin: 0.5px 0.5px 0.5px 0.5px; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td3 {width: 71.7px; margin: 0.5px 0.5px 0.5px 0.5px; padding: 1.0px 1.0px 1.0px 1.0px}
+    td.td4 {width: 68.5px; margin: 0.5px 0.5px 0.5px 0.5px; padding: 1.0px 1.0px 1.0px 1.0px}
+    ul.ul1 {list-style-type: disc}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1"><span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><span class="s1"><b>Assignment Title</b></span></p>
+<p class="p3"><span class="s1">CS 440/640 Programming assignment 1 <br>
+Farheen Rahman<br>
+Andrew Spencer<br>
+3/6/2019</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1"><b>Problem Definition<span class="Apple-converted-space"> </span></b></span></p>
+<p class="p3"><span class="s1"><b>Give a concise description of current problem. What needs to be solved? Why is the result useful? Do you make any assumptions? What are the anticipated difficulties?<span class="Apple-converted-space"> </span></b></span></p>
+<p class="p3"><span class="s1">The current problem is that our neural network only has an input layer and an output layer. We need to implement back-propagation in order to train the hidden layer that we implement in the code. The result is useful because neural networks are crucial to machine learning as they are supervised algorithms that are able to model or train data to a function through inference. Ideally, the algorithm can correctly label classes for unseen inputs. The only assumptions that we can make is the general algorithm for training a neural network that includes forward propagation and backward propagation, and can apply a learning rate to the data. We also know that there must be an accounted for error. The anticipated difficulties include fully understanding the relationship between the layers and their positions in back propagation. We also need to be able to recognize the differences between logistic regression and neural networks, and how soft max functions in our code.<span class="Apple-converted-space"> </span></span></p>
+<p class="p6"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1"><b>Method and Implementation<span class="Apple-converted-space"> </span></b></span></p>
+<p class="p3"><span class="s1"><b>Give a concise description of the implemented method. For example, you might describe the motivation of your idea, the algorithmic steps of your methods, or the mathematical formulation of your method.<span class="Apple-converted-space"> </span></b></span></p>
+<p class="p3"><span class="s1"><b>Briefly outline the functions you created in your code to carry out the algorithmic steps you described earlier.<span class="Apple-converted-space"> </span></b></span></p>
+<p class="p3"><span class="s1">My functions greatly mirror those of the logistic regression. The differences include that the neural network should have more than two variables, there should be one including the hidden layer. Just as we initialize the input layer, we did the same for the hidden layer.<span class="Apple-converted-space"> </span></span></p>
+<p class="p3"><span class="s1">In our forward propagation, we needed to find the dot product between the input layer and the hidden layer and apply the sigmoid activation function. We also did the same from the hidden layer to the output layer, this way we are tracing through the neural network in a forward direction. The soft max scores are then meant to constrict our outputs between 0 and 1 and enforce positivity.<span class="Apple-converted-space"> </span></span></p>
+<p class="p3"><span class="s1">Once we have our outputs from forward propagation, we can then implement back-propagation to properly weigh our links. So we work backwards from the output to the input layer. Again, we need to apply a function to the outputs, so we use the derivative of the sigmoid. We do this from the outputs to the hidden layer, and again from the hidden layer to the input.<span class="Apple-converted-space"> </span></span></p>
+<p class="p3"><span class="s1">Then we calculate the gradients of our functions similarly to the logistic regression, but we need twice the number of gradients (since we have an added input), and then finally update our gradients by applying an alpha function to increment the changes very gradually.<span class="Apple-converted-space"> </span></span></p>
+<p class="p3"><span class="s1">Of course, we wrote a sigmoid and a sigmoid prime function to help aid in the activation functions.</span></p>
+<p class="p3"><span class="s1">The next major piece of code we implemented was for the cross validation. We take the data written in from the csv file and, knowing the length, divide the data into a list of 5 lists of equal size. Then, saving the first of the five data sets as our validation set, we only train the model for the other four data sets. We implemented a cumulative counter for the confusion matrices to get the average of all of the four data sets. We also average out the accuracies of each model.</span></p>
+<p class="p3"><span class="s1">Then we used our trained model on our validation set.<span class="Apple-converted-space"> </span></span></p>
+<p class="p3"><span class="s1">The L2 regularization creates an additional bound to increase accuracy. For this, all we did was add the derivative of our regularization term to our gradient parameters.<span class="Apple-converted-space"> </span></span></p>
+<p class="p5"><span class="s1"><b>Experiments</b></span></p>
+<p class="p3"><span class="s1"><b>Describe your experiments, including the number of tests that you performed, and the relevant parameter values.<span class="Apple-converted-space"> </span></b></span></p>
+<p class="p3"><span class="s1"><b>Define your evaluation metrics, e.g., detection rates, accuracy, running time.<span class="Apple-converted-space"> </span></b></span></p>
+<p class="p3"><span class="s1">The experiments that we ran included implementing a neural network for one large data set (instead of splitting it up like in cross validation). In order to do that, we initialized our hidden layer to have 20 nodes. We use 20 nodes for the entire experiment. For the single large data set, we ran it about five times and produced very similar accuracies throughout.<span class="Apple-converted-space"> </span></span></p>
+<p class="p3"><span class="s1">As for our cross validation, we ran about 25 experiments, considering there are five data sets and each of them need to be tested against a single validation set (which alternates throughout iterations).</span></p>
+<p class="p3"><span class="s1">Our relevant parameter values were always the initialized input layer and output layer that were given in the logistic regression file. We also, as I say before, kept the number of nodes in the hidden layer to 20.</span></p>
+<p class="p3"><span class="s1">The manner by which we evaluated our models were by calculating accuracy and comparing the predicted data to our actual data in a confusion matrix. This provided a great overview of our results.</span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1"><b>Results</b></span></p>
+<p class="p3"><span class="s1">List your experimental results. Provide examples of input images and output images. If relevant, you may provide images showing any intermediate steps. If your work involves videos, do not submit the videos but only links to them.<span class="Apple-converted-space"> </span></span></p>
+<table cellspacing="0" cellpadding="0">
+  <tbody>
+    <tr>
+      <td colspan="3" valign="middle" class="td1">
+        <p class="p7"><span class="s1"><b>Results</b></span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td2">
+        <p class="p8"><span class="s1">Trial<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="middle" class="td3">
+        <p class="p8"><span class="s1">Source Image<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="middle" class="td4">
+        <p class="p8"><span class="s1">Result Image</span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td2">
+        <p class="p8"><span class="s1">trial 1<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="middle" class="td3">
+        <p class="p9"><span class="s1"><span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="middle" class="td4">
+        <p class="p9"><span class="s1"><span class="Apple-converted-space"> </span></span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td2">
+        <p class="p8"><span class="s1">trial 2<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="middle" class="td3">
+        <p class="p9"><span class="s1"><span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="middle" class="td4">
+        <p class="p9"><span class="s1"><span class="Apple-converted-space"> </span></span></p>
+      </td>
+    </tr>
+    <tr>
+      <td valign="middle" class="td2">
+        <p class="p8"><span class="s1">trial 3<span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="middle" class="td3">
+        <p class="p9"><span class="s1"><span class="Apple-converted-space"> </span></span></p>
+      </td>
+      <td valign="middle" class="td4">
+        <p class="p9"><span class="s1"><span class="Apple-converted-space"> </span></span></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1"><b>Discussion<span class="Apple-converted-space"> </span></b></span></p>
+<p class="p3"><span class="s1">Discuss your method and results:<span class="Apple-converted-space"> </span></span></p>
+<ul class="ul1">
+  <li class="li8"><span class="s1">What are the strengths and weaknesses of your method?<span class="Apple-converted-space"> </span></span></li>
+  <li class="li8"><span class="s1">Do your results show that your method is generally successful or are there limitations? Describe what you expected to find in your experiments, and how that differed or was confirmed by your results.<span class="Apple-converted-space"> </span></span></li>
+  <li class="li8"><span class="s1">Potential future work. How could your method be improved? What would you try (if you had more time) to overcome the failures/limitations of your work?</span></li>
+</ul>
+<p class="p6"><span class="s1"></span><br></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1"><b>Conclusions<span class="Apple-converted-space"> </span></b></span></p>
+<p class="p3"><span class="s1">Based on your discussion, what are your conclusions? What is your main message?<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"></span><br></p>
+<p class="p5"><span class="s1"><b>Credits and Bibliography<span class="Apple-converted-space"> </span></b></span></p>
+<p class="p3"><span class="s1">Cite any papers or other references you consulted while developing your solution. Citations to papers should include the authors, the year of publication, the title of the work, and the publication information (e.g., book name and publisher; conference proceedings and location; journal name, volume and pages; technical report and institution).<span class="Apple-converted-space"> </span></span></p>
+<p class="p3"><span class="s1">Material on the web should include the url and date of access.<span class="Apple-converted-space"> </span></span></p>
+<p class="p3"><span class="s1">Credit any joint work or discussions with your classmates.<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s1"></span><br></p>
+</body>
+</html>

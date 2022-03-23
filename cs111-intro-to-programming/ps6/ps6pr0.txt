@@ -1,0 +1,5 @@
+
+
+1. I feel as though those drawbacks do not still exist today because they have been addressed. Even though we do use recursion for certain problems, which is similar to a subroutine, I feel these tasks are being completed at a much faster pace. The second issue about having to add certain functions into the program has in a way, been eradicated and is still being done today. We have such a large library of functions that are usable after having made them a part of the overall program. At the same time that library is getting progressively larger as we add more and more functions to its abilities.
+
+2. Another advantage of high level language is that it can be understood by anyone who’s willing to learn. It’s extremely accessible and students from so many different fields can learn how to code. 

@@ -1,0 +1,36 @@
+#
+# ps6pr5.txt (Problem Set 6, Problem 5)
+#
+# Calling a distance function twice
+#
+#
+#
+00   read r1           # input x_0
+01   read r2           # input x_1
+02   read r3           # input x_2
+03   copy r12 r2       # r12 = r2
+04   call r14 12       # copy next address in r14, skip to 12
+05   copy r5 r13       # r5 = r13
+06   copy r12 r3       # r12 = r3
+07   call r14 12       # copy next address in r14, skip to 12
+08   copy r6 r13       # r6 = r13
+09   jumpn 18          # skip to 18
+10   nop
+11   nop
+12   sub r13 r1 r12    # r13 = r1 - r12
+13   jltzn r13 15      # if r13 < 0, skip to 15
+14   jumpr r14         # jump to r14
+15   neg r13 r13       # r13 = -r13
+16   jumpr r14         # jump to r14
+17   nop
+18   sub r4 r6 r5      # r4 = r6 - r5
+19   jltzn r4 25       # if r4 < 0, skip to 25
+20   jeqzn r4 23       # if r4 = 0, skip to 23
+21   jgtzn r4 23       # if r4 > 0, skip to 23
+22   nop
+23   write r2          # print r2
+24   halt
+25   write r3          # print r3
+26   halt 
+     
+

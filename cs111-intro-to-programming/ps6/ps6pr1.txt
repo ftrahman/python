@@ -1,0 +1,15 @@
+#
+# ps6pr1.txt (Problem Set 6, Problem 1)
+#
+# Cubic countdown
+#
+
+00   read r1          # get # from user and store it in r1
+01   mul r2 r1 r1     # multiply value in r1 by itself, squares the number, stores in r2
+02   mul r2 r2 r1     # multiply value in r2 by r1, cubes the number, stores in r2
+03   write r2         # prints value in r2
+04   addn r2 -1       # subtracts 1 from value in r2
+05   jeqzn r2 7       # if r2 is equal to 0, jump to line 07
+06   jumpn 03         # jump to line 03 and repeat steps from there
+07   write r2         # prints final r2, should be 0
+08   halt             
